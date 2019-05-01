@@ -14,8 +14,6 @@ class Years(Resource):
         query = conn.execute("select Year from Aqueduct_Data")
         return {'years':[i[0] for i in query.fetchall()]}
 
-
-
 class YearNum(Resource):
     def get(self, year_num):
         conn = db_connect.connect()
