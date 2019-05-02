@@ -1,17 +1,25 @@
 from tkinter import *
 
+def grab(start_date, end_date, file_path):
+    pass
+
+
 master = Tk()
+
+master.title("Aqueduct Data")
+master.geometry('1300x200')
+
 Label(master, text="Start Date").grid(row=0)
 Label(master, text="End Date").grid(row=1)
 Label(master, text="destination file path").grid(row=2)
 
-e1 = Entry(master)
-e2 = Entry(master)
-e3 = Entry(master)
+start_date = Entry(master)
+end_date = Entry(master)
+file_path = Entry(master)
 
-e1.grid(row=0, column=1)
-e2.grid(row=1,column=1)
-e3.grid(row=2,column=1)
+start_date.grid(row=0, column=1)
+end_date.grid(row=1,column=1)
+file_path.grid(row=2,column=1)
 
 Res = IntVar()
 solids= IntVar()
@@ -73,7 +81,18 @@ Checkbutton(master, text="MD Precip inch/mon",variable=MD_precip).grid(row=2, co
 Checkbutton(master, text="MD Temp F", variable=MD_Temp).grid(row=2, column=7)
 
 def write_selections():
-    print("These items were selected")
+    print(start_date.get())
+    print(end_date.get())
+    print(file_path.get())
+    print(Res.get())
+    print(solids.get())
+
+#feed selections into array then json file?
+
+button=Button(master, text="Download Data", bg="blue", fg="white", command=write_selections)
+button.grid(column=7, row=5)
+
+
 
 
 
