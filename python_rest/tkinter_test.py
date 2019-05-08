@@ -1,5 +1,7 @@
 from tkinter import *
 
+
+
 def grab(start_date, end_date, file_path):
     pass
 
@@ -9,17 +11,23 @@ master = Tk()
 master.title("Aqueduct Data")
 master.geometry('1300x200')
 
-Label(master, text="Start Date").grid(row=0)
-Label(master, text="End Date").grid(row=1)
-Label(master, text="destination file path").grid(row=2)
+Label(master, text="Start Year").grid(row=0)
+Label(master, text="Start Month").grid(row=1)
+Label(master, text="End Year").grid(row=2)
+Label(master, text="End Month").grid(row=3)
+Label(master, text="destination file path").grid(row=4)
 
 start_date = Entry(master)
 end_date = Entry(master)
 file_path = Entry(master)
+start_month = Entry(master)
+end_month = Entry(master)
 
 start_date.grid(row=0, column=1)
-end_date.grid(row=1,column=1)
-file_path.grid(row=2,column=1)
+start_month.grid(row=1, column=1)
+end_date.grid(row=2,column=1)
+end_month.grid(row=3,column=1)
+file_path.grid(row=4,column=1)
 
 Res = IntVar()
 solids= IntVar()
@@ -81,11 +89,16 @@ Checkbutton(master, text="MD Precip inch/mon",variable=MD_precip).grid(row=2, co
 Checkbutton(master, text="MD Temp F", variable=MD_Temp).grid(row=2, column=7)
 
 def write_selections():
-    print(start_date.get())
-    print(end_date.get())
-    print(file_path.get())
-    print(Res.get())
-    print(solids.get())
+    sd =(start_date.get())
+    sm = (start_month.get())
+    ed = (end_date.get())
+    em = (end_month.get())
+    path =(file_path.get())
+
+    print(sd, sm, ed, em, path)
+    return (sd, sm, ed, em, path)
+
+
 
 #feed selections into array then json file?
 
