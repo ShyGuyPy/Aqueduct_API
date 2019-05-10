@@ -1,4 +1,4 @@
-CREATE TABLE test_table7(
+CREATE TABLE Norb_table(
     Id INT PRIMARY KEY NOT NULL,
     Year INT  NOT NULL,
     Month INT NOT NULL,
@@ -30,7 +30,11 @@ CREATE TABLE test_table7(
     MD_Temp_F FLOAT
 );
 
-COPY test_table FROM 'C:\Users\icprbadmin\Documents\Python_Scripts\python_rest\Reservoir_intake.csv' DELIMITER ';' CSV HEADER;
+\COPY test_table FROM 'C:\Users\icprbadmin\Documents\Python_Scripts\python_rest\Reservoir_intake.csv' DELIMITER ';' CSV HEADER;
 C:\Users\icprbadmin\Documents\Python_Scripts\python_rest
 
-COPY test_table7 FROM 'Reservoir_intake_tweaked.csv' DELIMITER ',' CSV HEADER;
+COPY Norb_table FROM 'Reservoir_intake_tweaked.csv' DELIMITER ',' CSV HEADER;
+
+\COPY Norb_table FROM '/Users/lukevawter/Desktop/Python_ICPRB/Aqueduct_API/python_rest/Reservoir_intake_tweaked.csv' DELIMITER ',' CSV HEADER;
+
+/Users/lukevawter/Desktop/Python_ICPRB/Aqueduct_API/python_rest
