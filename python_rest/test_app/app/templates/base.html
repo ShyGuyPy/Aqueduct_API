@@ -1,5 +1,19 @@
-<div>
-    Aqueduct:
-    <a href="/index">Home</a>
-    <a href="/login">Login</a>
-</div>
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Aqueduct</title>
+      {% else %}
+      <title>Welcome to Aqueduct Data Portal</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Aqueduct:<br>
+            <a href="/index">Home</a><br>
+            <a href="/login">Login</a><br>
+            <a href="/test">Test</a>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
+
