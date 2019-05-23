@@ -1,0 +1,10 @@
+h1{
+  color: purple;
+}
+
+p{
+  color: tan;
+  font-size: 15px;
+  font:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight:bold;
+}
