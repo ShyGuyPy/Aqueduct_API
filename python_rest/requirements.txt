@@ -15,5 +15,11 @@ Werkzeug==0.15.2
 Flask-WTF==0.14.2
 WTForms==2.2.1
 
+marshmallow==2.19.2
+flask-marshmallow==0.10.1
+flask-sqlalchemy==2.4.0
+
+
+
 
 
