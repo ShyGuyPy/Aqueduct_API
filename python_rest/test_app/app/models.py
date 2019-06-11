@@ -32,3 +32,13 @@ class Post(db.Model):
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
+
+class Test_data(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    year = db.Column(db.Integer)
+    month = db.Column(db.Integer)
+    res = db.Column(db.Integer)
+    solids = db.Column(db.Integer)
+
+    def __repr__(self):
+        return '<Data {}>'.format(self.month, self.year, self.id)
