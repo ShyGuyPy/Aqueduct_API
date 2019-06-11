@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect
+from flask import render_template, flash, redirect, url_for
 from app import app, db
 from app.forms import LoginForm
 from flask_login import current_user, login_user
@@ -70,6 +70,7 @@ def logout():
 @app.route('/test')
 def test():
     return render_template('test.html')
+    #return redirect(url_for('test'))
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
