@@ -17,7 +17,8 @@
             {% else %}
             <a href="{{ url_for('logout') }}">Logout</a>
             {% endif %}
-            <a href="{{ url_for('test')}}"> Test </a>
+            <a href="{{ url_for('test')}}"> Test </a><br>
+            <a href="{{ url_for('data')}}">Data</a><br>
         </div>
         <hr>
         {% with messages = get_flashed_messages() %}

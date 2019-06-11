@@ -1,13 +1,13 @@
 from flask import render_template, flash, redirect, url_for
 from app import app, db
-from app.forms import LoginForm
+from app.forms import LoginForm, RegistrationForm, DataForm
 from flask_login import current_user, login_user
 from app.models import User
 from flask_login import logout_user
 from flask_login import login_required
 from flask import request
 from werkzeug.urls import url_parse
-from app.forms import RegistrationForm
+
 
 
 @app.route('/')
@@ -82,6 +82,11 @@ def register():
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
-        flash('Congatulations, you are now a registered user!')
+        flash('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
+
+@app.route('/data', methods=['GET', 'POST'])
+def data():
+    form = DataForm()
+    return render_template('data.html', title='Data', form=form)
