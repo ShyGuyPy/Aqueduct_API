@@ -38,11 +38,11 @@ class Data(db.Model):
     year = db.Column(db.Integer)
     month = db.Column(db.Integer)
     res = db.Column(db.Integer)
-    solids = db.Column(db.Boolean)
-    NTU = db.Column(db.Boolean)
-    org_mal = db.Column(db.Boolean)
-    MPN_100ml = db.Column(db.Boolean)
-    MPN_100ml_1 = db.Column(db.Boolean)
+    solids = db.Column(db.Integer)#Bool
+    NTU = db.Column(db.Integer)#Bool
+    org_mal = db.Column(db.Integer)#Bool
+    MPN_100ml = db.Column(db.Integer)#Bool
+    MPN_100ml_1 = db.Column(db.Integer)#Bool
     LosR = db.Column(db.Integer)
     Silica = db.Column(db.Integer)
     Ca = db.Column(db.Integer)
