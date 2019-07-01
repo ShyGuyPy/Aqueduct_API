@@ -62,6 +62,9 @@ def login():
         return redirect(url_for('index'))
     return render_template('login.html', title='Sign In', form=form)
 
+# def data_output():
+#     form = DataForm()
+
 @app.route('/logout')
 def logout():
     logout_user()

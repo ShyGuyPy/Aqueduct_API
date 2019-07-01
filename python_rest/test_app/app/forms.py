@@ -31,4 +31,9 @@ class RegistrationForm(FlaskForm):
 class DataForm(FlaskForm):
     start_date = DateField('enter search start date', validators=[DataRequired()])
     end_date = DateField('enter search end date', validators=[DataRequired()])
+    res = BooleanField('res') #, validators=[DataRequired()])
+    solids = BooleanField('solids')
+    NTU = BooleanField('NTU')
+    org_ml = BooleanField('org_ml')
+
     submit = SubmitField('get data')

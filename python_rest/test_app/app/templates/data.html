@@ -17,6 +17,18 @@
             <span style= "color: red;">[{{ error }}]</span>
             {% endfor %}
         </p>
+        <p>
+            data to include: <br>
+            {{form.res.label}} <br>
+            {{form.res}} <br>
+            {{form.solids.label}} <br>
+            {{form.solids}} <br>
+            {{form.NTU.label}} <br>
+            {{form.NTU}} <br>
+            {{form.org_ml.label}} <br>
+            {{form.org_ml}} <br>
+
+        </p>
         <p>{{form.submit()}}</p>
     </form>
 {% endblock %}
