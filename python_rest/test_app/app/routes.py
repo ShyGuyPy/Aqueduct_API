@@ -2,7 +2,7 @@ from flask import render_template, flash, redirect, url_for
 from app import app, db
 from app.forms import LoginForm, RegistrationForm, DataForm
 from flask_login import current_user, login_user
-from app.models import User
+from app.models import User, Data
 from flask_login import logout_user
 from flask_login import login_required
 from flask import request
@@ -62,9 +62,6 @@ def login():
         return redirect(url_for('index'))
     return render_template('login.html', title='Sign In', form=form)
 
-# def data_output():
-#     form = DataForm()
-
 @app.route('/logout')
 def logout():
     logout_user()
@@ -93,3 +90,11 @@ def register():
 def data():
     form = DataForm()
     return render_template('data.html', title='Data', form=form)
+
+@app.route('/data_output', methods=['GET', 'POST'])
+def data_output():
+    #form = DataForm()
+
+    return render_template('output.html', title="Data Output")#, form=form)
+        #return redirect(url_for('output'))
+

@@ -31,9 +31,36 @@ class RegistrationForm(FlaskForm):
 class DataForm(FlaskForm):
     start_date = DateField('enter search start date', validators=[DataRequired()])
     end_date = DateField('enter search end date', validators=[DataRequired()])
+
     res = BooleanField('res') #, validators=[DataRequired()])
     solids = BooleanField('solids')
     NTU = BooleanField('NTU')
     org_ml = BooleanField('org_ml')
+    MPN_100ml = BooleanField('MPN_100ml')
+    MPN_100ml_1 = BooleanField('MPN_100ml_1')
+    LosR = BooleanField('LosR')
+
+    Silica = BooleanField('Silica')
+    Ca = BooleanField('Ca')
+    Mg = BooleanField('Mg')
+    Ca_Mg = BooleanField('Ca_Mg')
+    NO3 = BooleanField('NO3')
+    NO3_USGS = BooleanField('NO3_USGS')
+
+    Cl2 = BooleanField('Cl2')
+    Na = BooleanField('Na')
+    SO4 = BooleanField('SO4')
+    K = BooleanField('K')
+    pH = BooleanField('pH')
+    Alk = BooleanField('Alk')
+
+    Hard = BooleanField('Hard')
+    Nhard = BooleanField('Nhard')
+    C_USGSTemp = BooleanField('C_USGSTemp')
+    F_USGS = BooleanField('F_USGS')
+    Temp = BooleanField('Temp')
+    MD_Precip_inch_mon = BooleanField('MD_Precip_inch_mon')
+    MD_Temp_F = BooleanField('MD_Temp_F')
 
     submit = SubmitField('get data')
+
